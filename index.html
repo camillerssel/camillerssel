@@ -37,7 +37,7 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 40px 60px;
-            text-transform: uppercase; /* Force TOUT le site en majuscules */
+            text-transform: uppercase; /* Force tout le site en majuscules */
         }
 
         /* Liens généraux */
@@ -54,7 +54,7 @@
         /* Classes de typographies strictes */
         .typo-coconat {
             font-family: 'Coconat', serif;
-            font-weight: 400 !important; /* Force le style Regular original, sans gras artificiel */
+            font-weight: 400 !important; /* Force le style Regular original */
             font-style: normal;
         }
 
@@ -107,7 +107,7 @@
             font-weight: normal; /* Supprime le gras par défaut du h1 */
         }
 
-        /* Ajustements visuels des espacements du titre pour coller à l'image */
+        /* Ajustements visuels des espacements du titre */
         .hero-title .typo-outfit {
             letter-spacing: -3px;
         }
@@ -116,7 +116,7 @@
             letter-spacing: -1px;
         }
 
-        /* Bouton "SEE PROJECTS" au milieu (Tout en Outfit SemiBold) */
+        /* Bouton "SEE PROJECTS" au milieu */
         .cta-btn {
             font-size: 0.85rem;
             letter-spacing: 2px;
@@ -124,16 +124,26 @@
             border-bottom: 1.5px solid #2B1F1D;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
+            gap: 8px; /* Espace fixe entre le texte et la flèche */
+            transition: opacity 0.3s ease;
         }
 
         .cta-btn:hover {
-            opacity: 1;
-            letter-spacing: 3px;
+            opacity: 1; /* Le bouton reste bien net au survol */
         }
 
-        /* Footer vide pour équilibrer l'espace avec le Flexbox */
+        /* Animation ciblée sur la flèche */
+        .cta-btn .arrow {
+            display: inline-block; /* Nécessaire pour pouvoir appliquer une translation */
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1); /* Animation fluide */
+        }
+
+        /* Au survol du bouton, on pousse la flèche vers la droite */
+        .cta-btn:hover .arrow {
+            transform: translateX(6px); 
+        }
+
+        /* Footer vide pour équilibrer l'espace */
         footer {
             height: 20px;
         }
@@ -165,13 +175,11 @@
     <!-- Barre de navigation haute -->
     <header>
         <a href="index.html" class="logo">
-            <!-- CAMILLE (Coconat Regular) et ROUSSEL (Outfit SemiBold) -->
             <span class="typo-coconat">CAMILLE</span> <span class="typo-outfit">ROUSSEL</span>
         </a>
         
         <nav>
             <ul>
-                <!-- Liens de navigation (Outfit SemiBold) -->
                 <li><a href="projects.html" class="typo-outfit">PROJECTS</a></li>
                 <li><a href="photography.html" class="typo-outfit">PHOTOGRAPHY</a></li>
                 <li><a href="about.html" class="typo-outfit">ABOUT</a></li>
@@ -182,14 +190,13 @@
     <!-- Contenu Central -->
     <main>
         <h1 class="hero-title">
-            <!-- Alignement exact des typos demandées -->
             <span class="typo-outfit">ART</span> <span class="typo-coconat">DIRECTOR</span><br>
             <span class="typo-coconat">BASED IN</span> <span class="typo-outfit">PARIS</span>
         </h1>
         
-        <!-- Bouton entièrement en Outfit SemiBold -->
+        <!-- Bouton avec flèche isolée pour l'animation -->
         <a href="projects.html" class="cta-btn typo-outfit">
-            SEE PROJECTS &rarr;
+            SEE PROJECTS <span class="arrow">&rarr;</span>
         </a>
     </main>
 
