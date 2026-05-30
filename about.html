@@ -1,14 +1,3 @@
-Oups ! C'est le petit piège classique quand on injecte directement du code qui utilise un `IntersectionObserver` : comme le script attend que les éléments passent la "ligne de démarcation" de l'écran en scrollant, les textes situés tout en haut (le "HEY YOU !") restent bloqués à 110% en dessous de leur masque invisible car ils sont chargés *déjà* présents à l'écran sans mouvement de scroll initial.
-
-Pour régler ça de manière ultra-propre, robuste et sans bavure, j'ai modifié la logique dans le code ci-dessous :
-
-1. Le texte du haut ("HEY YOU !", etc.) utilise une animation CSS directe (`animation`) pour sortir immédiatement du masque dès l'ouverture de la page, exactement comme dans le fichier `Animation texte.mov`.
-2. Le bloc du bas ("STAY IN TOUCH") conserve le script d'observation pour se déclencher uniquement quand l'utilisateur scrolle enfin tout en bas de la page.
-3. J'ai nettoyé le code pour être certain qu'aucun résidu de texte ou de commentaire parasite ne vienne s'afficher en haut de ton écran.
-
-Voici le code HTML/CSS complet et corrigé à 100% :
-
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
