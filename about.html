@@ -37,12 +37,12 @@
             background-color: #FAF6F0; /* Fond crème */
             color: #2B1F1D; /* Texte marron foncé */
             font-family: 'Coconat', serif;
-            /* Padding : Haut (40px), Droite (60px), Bas (30px comme demandé), Gauche (60px) */
+            /* Padding : Haut (40px), Droite (60px), Bas (30px), Gauche (60px) */
             padding: 40px 60px 30px 60px; 
             display: flex;
             flex-direction: column;
             gap: 60px;
-            text-transform: uppercase; /* Force tout le site en majuscules */
+            text-transform: uppercase; /* Force le reste du site en majuscules */
         }
 
         /* Liens généraux */
@@ -131,9 +131,11 @@
             font-weight: normal;
         }
 
+        /* Style spécifique pour la description en bas de casse */
         .profile-text p {
             font-size: 1.15rem;
             line-height: 1.5;
+            text-transform: none; /* Désactive les majuscules pour passer en bas de casse */
         }
 
         /* Structure des sections (Expériences et Éducations) */
@@ -277,7 +279,6 @@
             letter-spacing: 0.5px;
             opacity: 0.7;
             padding-top: 20px;
-            margin-bottom: 0; /* Aligné sur le nouveau padding du body */
         }
 
         /* Responsive Mobile */
@@ -315,11 +316,13 @@
         </div>
         <div class="profile-text">
             <h1 class="typo-coconat">HEY <span class="typo-outfit">YOU !</span></h1>
+            
+            <!-- Les paragraphes ci-dessous s'affichent désormais en Coconat Regular Bas de Casse -->
             <p class="typo-coconat">
-                Art Director based in Paris, I've been working in agencies for 6 years, shaping brands into clear, desirable identities with a strong focus on both branding and digital experiences.
+                Art Director based in Paris, I’ve been working in agencies for 6 years, shaping brands into clear, desirable identities with a strong focus on both branding and digital experiences.
             </p>
             <p class="typo-coconat">
-                You can find me at this address : <br>
+                You can find me at this adress :<br>
                 <a href="mailto:camillerssel@gmail.com" class="underline">camillerssel@gmail.com</a>
             </p>
             <p class="typo-coconat">
