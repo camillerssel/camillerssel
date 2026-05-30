@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT — CAMILLE ROUSSEL</title>
     
+    <!-- Importation de la police Outfit via Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
@@ -36,7 +37,8 @@
             background-color: #FAF6F0; /* Fond crème */
             color: #2B1F1D; /* Texte marron foncé */
             font-family: 'Coconat', serif;
-            padding: 40px 60px;
+            /* Padding : Haut (40px), Droite (60px), Bas (30px comme demandé), Gauche (60px) */
+            padding: 40px 60px 30px 60px; 
             display: flex;
             flex-direction: column;
             gap: 60px;
@@ -184,7 +186,7 @@
             opacity: 0.9;
         }
 
-        /* --- BOUTON BACK TO TOP AVEC BORDS ARRONDIS À 4PX --- */
+        /* --- BOUTON BACK TO TOP --- */
         .back-to-top-container {
             display: flex;
             justify-content: flex-end;
@@ -194,7 +196,7 @@
         .back-to-top-btn {
             font-size: 0.75rem;
             border: 1px solid #2B1F1D;
-            border-radius: 4px; /* Ajout des bords arrondis demandés */
+            border-radius: 4px;
             padding: 8px 16px;
             letter-spacing: 1px;
             display: inline-flex;
@@ -203,20 +205,17 @@
             transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
         }
 
-        /* Effet d'inversion sombre au survol */
         .back-to-top-btn:hover {
             background-color: #2B1F1D;
             color: #FAF6F0;
             opacity: 1;
         }
 
-        /* Structure de la flèche du haut */
         .back-to-top-btn .arrow-up {
             display: inline-block;
             transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        /* Animation verticale de la flèche */
         .back-to-top-btn:hover .arrow-up {
             transform: translateY(-5px);
         }
@@ -278,11 +277,12 @@
             letter-spacing: 0.5px;
             opacity: 0.7;
             padding-top: 20px;
+            margin-bottom: 0; /* Aligné sur le nouveau padding du body */
         }
 
         /* Responsive Mobile */
         @media (max-width: 900px) {
-            body { padding: 30px 20px; gap: 40px; }
+            body { padding: 30px 20px 30px 20px; gap: 40px; }
             header { flex-direction: column; gap: 20px; }
             .profile-section { grid-template-columns: 1fr; gap: 40px; }
             .resume-section { grid-template-columns: 1fr; gap: 20px; }
@@ -294,6 +294,7 @@
 </head>
 <body id="top">
 
+    <!-- Barre de navigation -->
     <header>
         <a href="index.html" class="logo">
             <span class="typo-coconat">CAMILLE</span> <span class="typo-outfit">ROUSSEL</span>
@@ -307,6 +308,7 @@
         </nav>
     </header>
 
+    <!-- Section Présentation & Photo -->
     <section class="profile-section">
         <div class="profile-image-container">
             <img src="profile.jpg" alt="" onerror="this.style.display='none'">
@@ -326,9 +328,11 @@
         </div>
     </section>
 
+    <!-- Section Expériences -->
     <section class="resume-section">
         <h2 class="section-title typo-coconat">EXPERIENCES</h2>
         <div class="resume-grid">
+            <!-- Ligne 1 -->
             <div class="grid-item">
                 <span class="date typo-outfit">2023 - TODAY</span>
                 <h3 class="item-title typo-outfit">CARRÉ NOIR</h3>
@@ -344,6 +348,7 @@
                 <h3 class="item-title typo-outfit">BETC</h3>
                 <p class="typo-coconat">Assistant AD</p>
             </div>
+            <!-- Ligne 2 -->
             <div class="grid-item">
                 <span class="date typo-outfit">JUNE - SEPT 2020</span>
                 <h3 class="item-title typo-outfit">DRAGON ROUGE</h3>
@@ -359,6 +364,7 @@
                 <h3 class="item-title typo-outfit">LE FIGARO</h3>
                 <p class="typo-coconat">UX/UI Designer<br>(Internship)</p>
             </div>
+            <!-- Ligne 3 -->
             <div class="grid-item">
                 <span class="date typo-outfit">2015</span>
                 <h3 class="item-title typo-outfit">STUDIO BLEU MARINE</h3>
@@ -377,6 +383,7 @@
         </div>
     </section>
 
+    <!-- Section Éducations -->
     <section class="resume-section border-bottom">
         <h2 class="section-title typo-coconat">EDUCATIONS</h2>
         <div class="resume-grid">
@@ -395,12 +402,14 @@
         </div>
     </section>
 
+    <!-- Bouton Retour en haut -->
     <div class="back-to-top-container">
         <a href="#top" class="back-to-top-btn typo-outfit">
             BACK TO TOP <span class="arrow-up">&uarr;</span>
         </a>
     </div>
 
+    <!-- Section Contact -->
     <section class="contact-section">
         <h2 class="typo-coconat">STAY IN <span class="typo-outfit">TOUCH</span></h2>
         <a href="mailto:camillerssel@gmail.com" class="contact-email typo-coconat">CAMILLERSSEL@GMAIL.COM</a>
@@ -410,6 +419,7 @@
         </a>
     </section>
 
+    <!-- Mentions de bas de page -->
     <footer>
         <span class="typo-outfit">&copy;2026 CAMILLE ROUSSEL. ALL RIGHTS RESERVED.</span>
         <span class="typo-outfit">MADE WITH LOVE & CODE</span>
