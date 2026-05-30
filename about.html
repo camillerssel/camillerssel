@@ -20,7 +20,7 @@
             font-display: swap;
         }
 
-        /* Styles Globaux basés sur l'identité visuelle */
+        /* Styles Globaux */
         * {
             margin: 0;
             padding: 0;
@@ -102,7 +102,7 @@
             letter-spacing: 1.5px;
         }
 
-        /* --- GRILLE PRINCIPALE DE PROFIL (4 colonnes) --- */
+        /* --- GRILLE PRINCIPALE DE PROFIL (4 colonnes strictement identiques à la section expérience) --- */
         .profile-section {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -111,13 +111,13 @@
             margin-top: 20px;
         }
 
-        /* Carré noir configuré à 445x530px se terminant à la fin de la colonne 2 */
+        /* Le carré se termine exactement à la fin de la colonne 2 (où se trouve Carré Noir) */
         .profile-image-container {
-            grid-column: 1 / span 2; 
-            justify-self: end; /* Aligne le bord droit sur la fin de la colonne de Carré Noir */
+            grid-column: 1 / 3; 
+            justify-self: end; /* Aligne le bord droit sur la ligne de fin de la colonne 2 */
             width: 445px;
             height: 530px;
-            max-width: 100%; /* Sécurité pour le responsive */
+            max-width: 100%; /* Évite les bugs sur tablettes */
             background-color: #000000;
             overflow: hidden;
         }
@@ -128,9 +128,9 @@
             object-fit: cover;
         }
 
-        /* Texte calé sur la colonne 3 (aligné avec CosaVostra) */
+        /* Le texte commence sur la colonne 3 (où se trouve CosaVostra) */
         .profile-text {
-            grid-column: 3 / span 2; 
+            grid-column: 3 / 5; 
             display: flex;
             flex-direction: column;
             gap: 25px;
@@ -147,7 +147,7 @@
             text-transform: none; /* Bas de casse */
         }
 
-        /* --- GRILLE PRINCIPALE DES PARCOURS (4 colonnes) --- */
+        /* --- GRILLE DES PARCOURS (4 colonnes) --- */
         .resume-section {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -229,7 +229,7 @@
             transform: translateY(-5px);
         }
 
-        /* --- SECTION CONTACT (INTERLIGNAGE 60PX) --- */
+        /* --- SECTION CONTACT --- */
         .cta-btn {
             font-size: 0.85rem;
             letter-spacing: 2px;
@@ -321,10 +321,9 @@
         </nav>
     </header>
 
-    <!-- Section Présentation & Photo -->
+    <!-- Section Présentation & Photo (Le carré noir termine à la fin de la colonne 2) -->
     <section class="profile-section">
         <div class="profile-image-container">
-            <!-- Tu pourras directement remplacer ou lier ta photo ici sur GitHub -->
             <img src="profile.jpg" alt="" onerror="this.style.display='none'">
         </div>
         <div class="profile-text">
@@ -347,14 +346,14 @@
     <section class="resume-section experience-section">
         <h2 class="section-title typo-coconat">EXPERIENCES</h2>
         
-        <!-- Colonne 2 (La photo du haut s'aligne sur le bord droit de cette colonne) -->
+        <!-- Colonne 2 (Le carré noir du dessus vient s'aligner exactement sur la fin de cette colonne) -->
         <div class="grid-item">
             <span class="date typo-outfit">2023 - TODAY</span>
             <h3 class="item-title typo-coconat">CARRÉ NOIR</h3>
             <p class="typo-outfit-light">Art Director</p>
         </div>
         
-        <!-- Colonne 3 (Le texte "Hey you !" s'aligne sur le bord gauche de cette colonne) -->
+        <!-- Colonne 3 (Le texte "Hey you !" s'aligne sur le début de cette colonne) -->
         <div class="grid-item">
             <span class="date typo-outfit">2021 - 2023</span>
             <h3 class="item-title typo-coconat">COSAVOSTRA</h3>
