@@ -3,55 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Premier Site Test</title>
+    <title>Camille Roussel — Art Director</title>
+    
+    <!-- Importation des polices élégantes depuis Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Styles Globaux basés sur image_311c50.png */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            /* Couleur de fond crème et texte marron foncé */
+            background-color: #FAF6F0; 
+            color: #2B1F1D;
+            font-family: 'Sora', sans-serif;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 40px 60px;
+        }
+
+        /* Liens généraux */
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        /* Barre de navigation du haut */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .logo span {
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* Contenu Central */
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
             text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+
+        /* Titre principal massif */
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 6.5rem; /* Ajustable selon tes préférences */
+            font-weight: 500;
+            line-height: 0.95;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            max-width: 1100px;
+            user-select: none;
         }
-        p {
-            color: #7f8c8d;
-            font-size: 1.1em;
+
+        /* Pour matcher l'effet un peu plus gras/moderne sur certains mots */
+        .hero-title .bold-text {
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            letter-spacing: -3px;
         }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+
+        /* Bouton "See Projects" au milieu */
+        .cta-btn {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #2B1F1D;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
         }
-        .btn:hover {
-            background-color: #2980b9;
+
+        .cta-btn:hover {
+            opacity: 1;
+            letter-spacing: 3px; /* Petit effet sympa au survol */
+        }
+
+        /* Footer vide pour équilibrer le flexbox comme sur la photo */
+        footer {
+            height: 20px;
+        }
+
+        /* Adaptation pour les écrans de téléphones */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .hero-title {
+                font-size: 3rem;
+            }
+            nav ul {
+                gap: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>🚀 Ça fonctionne !</h1>
-        <p>Mon site est officiellement en ligne sur GitHub Pages.</p>
-        <a href="#" class="btn" onclick="alert('Bravo, le bouton fonctionne aussi !')">Clique ici pour tester</a>
-    </div>
+    <!-- Barre de navigation haute -->
+    <header>
+        <!-- Le clic ici renvoie bien vers la racine (index.html) -->
+        <a href="index.html" class="logo">Camille <span>Roussel</span></a>
+        
+        <nav>
+            <ul>
+                <!-- Liens vers tes futures pages -->
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu Central -->
+    <main>
+        <h1 class="hero-title">
+            <span class="bold-text">Art</span> Director<br>Based in <span class="bold-text">Paris</span>
+        </h1>
+        
+        <!-- Ce bouton pointe vers la même page que "Projects" en haut à droite -->
+        <a href="projects.html" class="cta-btn">See Projects &rarr;</a>
+    </main>
+
+    <!-- Juste là pour l'espace du bas -->
+    <footer></footer>
 
 </body>
 </html>
