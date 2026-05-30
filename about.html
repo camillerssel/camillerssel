@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT — CAMILLE ROUSSEL</title>
     
-    <!-- Importation de la police Outfit via Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
 
     <style>
         /* Déclaration de ta police locale Coconat au format WOFF2 */
@@ -70,6 +69,13 @@
         .typo-outfit {
             font-family: 'Outfit', sans-serif;
             font-weight: 600 !important;
+        }
+
+        /* Nouvelle classe Outfit Light en bas de casse */
+        .typo-outfit-light {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 300 !important;
+            text-transform: none; /* Désactive les majuscules forcées */
         }
 
         /* Barre de navigation */
@@ -161,7 +167,6 @@
         /* Grilles internes (3 colonnes) */
         .resume-grid {
             display: grid;
-            repeat(3, 1fr);
             grid-template-columns: repeat(3, 1fr);
             gap: 50px 30px;
         }
@@ -300,7 +305,6 @@
 </head>
 <body id="top">
 
-    <!-- Barre de navigation -->
     <header>
         <a href="index.html" class="logo">
             <span class="typo-coconat">CAMILLE</span> <span class="typo-outfit">ROUSSEL</span>
@@ -314,7 +318,6 @@
         </nav>
     </header>
 
-    <!-- Section Présentation & Photo -->
     <section class="profile-section">
         <div class="profile-image-container">
             <img src="profile.jpg" alt="" onerror="this.style.display='none'">
@@ -335,62 +338,57 @@
         </div>
     </section>
 
-    <!-- Section Expériences (Noms des agences passés en Coconat Capital) -->
     <section class="resume-section">
         <h2 class="section-title typo-coconat">EXPERIENCES</h2>
         <div class="resume-grid">
-            <!-- Ligne 1 -->
             <div class="grid-item">
                 <span class="date typo-outfit">2023 - TODAY</span>
                 <h3 class="item-title typo-coconat">CARRÉ NOIR</h3>
-                <p class="typo-coconat">Art Director</p>
+                <p class="typo-outfit-light">Art Director</p>
             </div>
             <div class="grid-item">
                 <span class="date typo-outfit">2021 - 2023</span>
                 <h3 class="item-title typo-coconat">COSAVOSTRA</h3>
-                <p class="typo-coconat">Art Director</p>
+                <p class="typo-outfit-light">Art Director</p>
             </div>
             <div class="grid-item">
                 <span class="date typo-outfit">2020 - 2021</span>
                 <h3 class="item-title typo-coconat">BETC</h3>
-                <p class="typo-coconat">Assistant AD</p>
+                <p class="typo-outfit-light">Assistant AD</p>
             </div>
-            <!-- Ligne 2 -->
             <div class="grid-item">
                 <span class="date typo-outfit">JUNE - SEPT 2020</span>
                 <h3 class="item-title typo-coconat">DRAGON ROUGE</h3>
-                <p class="typo-coconat">Assistant AD<br>(Internship)</p>
+                <p class="typo-outfit-light">Assistant AD (Internship)</p>
             </div>
             <div class="grid-item">
                 <span class="date typo-outfit">APRIL - AUGUST 2019</span>
                 <h3 class="item-title typo-coconat">BUILD IN AMSTERDAM</h3>
-                <p class="typo-coconat">Assistant AD<br>(Internship)</p>
+                <p class="typo-outfit-light">Assistant AD (Internship)</p>
             </div>
             <div class="grid-item">
                 <span class="date typo-outfit">MAY - AUGUST 2017</span>
                 <h3 class="item-title typo-coconat">LE FIGARO</h3>
-                <p class="typo-coconat">UX/UI Designer<br>(Internship)</p>
+                <p class="typo-outfit-light">UX/UI Designer (Internship)</p>
             </div>
-            <!-- Ligne 3 -->
             <div class="grid-item">
                 <span class="date typo-outfit">2015</span>
                 <h3 class="item-title typo-coconat">STUDIO BLEU MARINE</h3>
-                <p class="typo-coconat">Set Assistant<br>(Internship)</p>
+                <p class="typo-outfit-light">Set Assistant (Internship)</p>
             </div>
             <div class="grid-item">
                 <span class="date typo-outfit">MARCH - APRIL 2014</span>
                 <h3 class="item-title typo-coconat">DOCS AD HOC</h3>
-                <p class="typo-coconat">Photo retouching<br>(Internship)</p>
+                <p class="typo-outfit-light">Photo retouching (Internship)</p>
             </div>
             <div class="grid-item">
                 <span class="date typo-outfit">MARCH 2013</span>
                 <h3 class="item-title typo-coconat">STUDIO BERGOEND</h3>
-                <p class="typo-coconat">Set Assistant<br>(Internship)</p>
+                <p class="typo-outfit-light">Set Assistant (Internship)</p>
             </div>
         </div>
     </section>
 
-    <!-- Section Éducations -->
     <section class="resume-section border-bottom">
         <h2 class="section-title typo-coconat">EDUCATIONS</h2>
         <div class="resume-grid">
@@ -409,14 +407,12 @@
         </div>
     </section>
 
-    <!-- Bouton Retour en haut -->
     <div class="back-to-top-container">
         <a href="#top" class="back-to-top-btn typo-outfit">
             BACK TO TOP <span class="arrow-up">&uarr;</span>
         </a>
     </div>
 
-    <!-- Section Contact -->
     <section class="contact-section">
         <h2 class="typo-coconat">STAY IN <span class="typo-outfit">TOUCH</span></h2>
         <a href="mailto:camillerssel@gmail.com" class="contact-email typo-coconat">CAMILLERSSEL@GMAIL.COM</a>
@@ -426,7 +422,6 @@
         </a>
     </section>
 
-    <!-- Mentions de bas de page -->
     <footer>
         <span class="typo-outfit">&copy;2026 CAMILLE ROUSSEL. ALL RIGHTS RESERVED.</span>
         <span class="typo-outfit">MADE WITH LOVE & CODE</span>
