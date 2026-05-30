@@ -41,6 +41,7 @@
             display: flex;
             flex-direction: column;
             gap: 60px;
+            text-transform: uppercase; /* Force tout le site en majuscules */
         }
 
         /* Liens généraux */
@@ -68,7 +69,6 @@
         .typo-outfit {
             font-family: 'Outfit', sans-serif;
             font-weight: 600 !important;
-            text-transform: uppercase;
         }
 
         /* Barre de navigation */
@@ -82,7 +82,6 @@
         .logo {
             font-size: 1.2rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
         nav ul {
@@ -105,11 +104,11 @@
             margin-top: 20px;
         }
 
-        /* Carré noir / Conteneur de la photo */
+        /* Conteneur de la photo */
         .profile-image-container {
             width: 100%;
-            aspect-ratio: 1 / 1.1; /* Proportion légèrement verticale comme sur l'image */
-            background-color: #000000; /* Devient le carré noir si aucune image n'est chargée */
+            aspect-ratio: 1 / 1.1; 
+            background-color: #000000; /* Devient le carré noir par défaut */
             overflow: hidden;
         }
 
@@ -153,7 +152,6 @@
         .section-title {
             font-size: 1.1rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
             font-weight: normal;
         }
 
@@ -229,12 +227,35 @@
             letter-spacing: -1px;
         }
 
-        .contact-linkedin {
+        /* --- BOUTON DE TYPE BOUTON D'ACCUEIL (SEE PROJECTS / LINKEDIN) --- */
+        .cta-btn {
             font-size: 0.85rem;
             letter-spacing: 2px;
-            border-bottom: 1px solid #2B1F1D;
-            padding-bottom: 4px;
+            padding-bottom: 6px;
+            border-bottom: 1.5px solid #2B1F1D;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px; /* Espace fixe entre le texte et la flèche */
+            transition: opacity 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            opacity: 1; /* Reste net au survol */
+        }
+
+        /* Animation ciblée sur la flèche */
+        .cta-btn .arrow {
             display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Au survol du bouton, on pousse la flèche vers la droite */
+        .cta-btn:hover .arrow {
+            transform: translateX(6px); 
+        }
+
+        /* Ajustement spécifique pour intégrer le bouton dans la section contact */
+        .contact-section .cta-btn {
             margin-top: 10px;
         }
 
@@ -279,7 +300,6 @@
     <!-- Section Présentation & Photo -->
     <section class="profile-section">
         <div class="profile-image-container">
-            <!-- Si profile.jpg n'existe pas encore, le bloc restera un carré noir parfait -->
             <img src="profile.jpg" alt="" onerror="this.style.display='none'">
         </div>
         <div class="profile-text">
@@ -380,7 +400,11 @@
     <section class="contact-section">
         <h2 class="typo-coconat">STAY IN <span class="typo-outfit">TOUCH</span></h2>
         <a href="mailto:camillerssel@gmail.com" class="contact-email typo-coconat">CAMILLERSSEL@GMAIL.COM</a>
-        <a href="#" class="contact-linkedin typo-outfit">LINKEDIN &rsaquo;</a>
+        
+        <!-- Le bouton Linkedin utilise maintenant la classe cta-btn avec la même animation et même flèche -->
+        <a href="#" class="cta-btn typo-outfit">
+            LINKEDIN <span class="arrow">&rarr;</span>
+        </a>
     </section>
 
     <!-- Mentions de bas de page -->
