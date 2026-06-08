@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAUGRENELLE — CAMILLE ROUSSEL</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Coconat';
+            src: url('Coconat-Regular.woff2') format('woff2'); 
+            font-weight: 400; font-style: normal; font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        html { scroll-behavior: smooth; background-color: #FAF6F0; }
+        body { background-color: #FAF6F0; color: #2B1F1D; font-family: 'Coconat', serif; padding: 40px 60px; text-transform: uppercase; }
+
+        /* Typo */
+        .typo-coconat { font-family: 'Coconat', serif; font-weight: 400; }
+        .typo-outfit { font-family: 'Outfit', sans-serif; font-weight: 600; }
+        
+        /* Reveal Animation */
+        .reveal-mask { display: block; overflow: hidden; }
+        .reveal-content { display: inline-block; transform: translateY(115%); animation: revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes revealUp { to { transform: translateY(0); } }
+
+        /* Navigation */
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 80px; }
+        .logo { font-size: 1.2rem; }
+        nav ul { display: flex; list-style: none; gap: 35px; }
+        
+        /* Grille Beaugrenelle */
+        .project-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .col-span-4 { grid-column: span 4; width: 100%; margin-bottom: 40px; }
+        .col-span-2 { grid-column: span 2; }
+        
+        .project-image { width: 100%; background: #ddd; aspect-ratio: 16/9; }
+        .project-description { font-size: 1.2rem; line-height: 1.4; max-width: 600px; margin-bottom: 60px; }
+
+        /* Contact Section */
+        .contact-section { margin-top: 150px; text-align: center; border-top: 1px solid #2B1F1D; padding-top: 60px; }
+        .stay-in-touch { font-size: 1.5rem; letter-spacing: 2px; }
+        .email { font-size: 3rem; margin-top: 10px; display: block; }
+
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; }
+            .col-span-2, .col-span-4 { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><span class="typo-coconat">CAMILLE</span> <span class="typo-outfit">ROUSSEL</span></a>
+        <nav>
+            <ul>
+                <li><a href="projects.html" class="typo-outfit">PROJECTS</a></li>
+                <li><a href="photography.html" class="typo-outfit">PHOTOGRAPHY</a></li>
+                <li><a href="about.html" class="typo-outfit">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-grid">
+        <div class="col-span-4 project-image"></div>
+        
+        <div class="col-span-2 project-description">
+            <span class="reveal-mask">
+                <span class="reveal-content">Defined a new visual territory for Beaugrenelle, expressing it across social media content, editorial guidelines, reels, and the brand's latest campaign.</span>
+            </span>
+        </div>
+        
+        <div class="col-span-4 project-image"></div>
+        <div class="col-span-2 project-image"></div>
+        <div class="col-span-2 project-image"></div>
+    </main>
+
+    <footer class="contact-section">
+        <div class="stay-in-touch typo-outfit">STAY IN TOUCH</div>
+        <a href="mailto:camillerssel@gmail.com" class="email typo-coconat">CAMILLERSSEL@GMAIL.COM</a>
+    </footer>
+
+</body>
+</html>
